@@ -1,0 +1,327 @@
+body {
+    background-color: #1a2332;
+    color: #e0e6ed;
+    font-family: Arial, sans-serif;
+}
+
+#lawn {
+    border: solid;
+    border-width: 3px;
+    border-color: #3d5a80;
+    margin: auto;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0f1419;
+}
+
+#desc {
+    position:fixed;
+    bottom:0;
+    right:10px;
+    color: #96a8c8;
+    background-color: rgba(15, 20, 25, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3d5a80;
+}
+
+#prestige {
+    position:fixed;
+    bottom: 0;
+    left: 10px;
+    background-color: rgba(15, 20, 25, 0.9);
+    border: 1px solid #3d5a80;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+#prestige p {
+    margin: 5px 0;
+    color: #96a8c8;
+}
+
+#prestige button {
+    background-color: #2d5a99;
+    color: #e0e6ed;
+    border: 1px solid #3d5a80;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#prestige button:hover {
+    background-color: #3d6aaa;
+}
+
+#superTicks {
+    position: fixed;
+    right:0;
+    top:0;
+    color: #96a8c8;
+    background-color: rgba(15, 20, 25, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3d5a80;
+}
+
+#money {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #4ade80;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(15, 20, 25, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3d5a80;
+}
+
+#totalMowed {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    color: #96a8c8;
+    background-color: rgba(15, 20, 25, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3d5a80;
+}
+
+#area {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    max-width: 300px;
+    background-color: rgba(15, 20, 25, 0.9);
+    border: 1px solid #3d5a80;
+    border-radius: 5px;
+    padding: 12px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#area button {
+    background-color: #2d5a99;
+    color: #e0e6ed;
+    border: 1px solid #3d5a80;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+    width: 100%;
+}
+
+#area button:hover {
+    background-color: #3d6aaa;
+}
+
+#area button:disabled {
+    background-color: #1a2332;
+    color: #667a92;
+    cursor: not-allowed;
+}
+
+#area span {
+    color: #96a8c8;
+    font-size: 12px;
+}
+
+#skillTreeBtn {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 16px;
+    font-size: 16px;
+    z-index: 100;
+    background-color: #2d5a99;
+    color: #e0e6ed;
+    border: 2px solid #3d5a80;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#skillTreeBtn:hover {
+    background-color: #3d6aaa;
+}
+
+#skillTreeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#skillTreeMenu {
+    background-color: #1a2332;
+    border: 2px solid #3d5a80;
+    border-radius: 8px;
+    padding: 20px;
+    width: 900px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#skillTreeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3d5a80;
+    padding-bottom: 10px;
+}
+
+#skillTreeHeader h2 {
+    margin: 0;
+    color: #96a8c8;
+}
+
+#skillTreeHeader button {
+    padding: 8px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #2d5a99;
+    color: #e0e6ed;
+    border: 1px solid #3d5a80;
+    border-radius: 4px;
+}
+
+#skillTreeHeader button:hover {
+    background-color: #3d6aaa;
+}
+
+#skillTreeMulch {
+    color: #96a8c8;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#skillTreeContent {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.skillPathColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skillTier {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skillTierLabel {
+    color: #96a8c8;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skillNode {
+    background-color: rgba(61, 90, 128, 0.2);
+    border: 2px solid #3d5a80;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.skillNode:hover {
+    border-color: #4a8fcc;
+    box-shadow: 0 0 10px rgba(74, 143, 204, 0.3);
+}
+
+.skillNode.locked {
+    opacity: 0.5;
+    border-color: #2d3f4f;
+    background-color: rgba(45, 63, 79, 0.2);
+}
+
+.skillNode.purchased {
+    border-color: #4ade80;
+    background-color: rgba(74, 222, 128, 0.1);
+}
+
+.skillNodeInfo {
+    flex: 1;
+}
+
+.skillNodeName {
+    font-weight: bold;
+    font-size: 14px;
+    color: #e0e6ed;
+    margin-bottom: 4px;
+}
+
+.skillNodeDesc {
+    font-size: 12px;
+    color: #96a8c8;
+    margin-bottom: 6px;
+}
+
+.skillNodeCost {
+    font-size: 12px;
+    color: #4a8fcc;
+    font-weight: bold;
+}
+
+.skillNodeLevel {
+    font-size: 11px;
+    color: #667a92;
+}
+
+.skillNodeButton {
+    padding: 8px 12px;
+    background-color: #2d5a99;
+    color: #e0e6ed;
+    border: 1px solid #3d5a80;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.skillNodeButton:hover:not(:disabled) {
+    background-color: #4a8fcc;
+    border-color: #5a9fdd;
+}
+
+.skillNodeButton:disabled {
+    background-color: #2d3f4f;
+    color: #667a92;
+    cursor: not-allowed;
+    border-color: #2d3f4f;
+}
+
+.skillPathName {
+    color: #4a8fcc;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3d5a80;
+}
